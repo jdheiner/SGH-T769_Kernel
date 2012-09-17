@@ -193,6 +193,12 @@ config CPU_FREQ_GOV_ONDEMAND_2_PHASE
 	help
 	  '2-phase' - This driver adds a new algo to save power
 
+config CPU_FREQ_GOV_SMARTASS2
+	tristate "'smartassV2' cpufreq governor"
+	depends on CPU_FREQ
+	help
+	  'smartassV2' - a "smart" optimized governor!
+
 config CPU_FREQ_GOV_INTELLIDEMAND
         tristate "'intellidemand' cpufreq policy governor"
         select CPU_FREQ_TABLE
