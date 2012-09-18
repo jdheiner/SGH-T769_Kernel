@@ -1,3 +1,4 @@
+CFLAGS_kgsl_pwrctrl.o :=$(call as-instr,.arch_extension sec,-DREQUIRES_SEC=1)
 ccflags-y := -Iinclude/drm
 
 msm_kgsl_core-$(CONFIG_MSM_KGSL) = \

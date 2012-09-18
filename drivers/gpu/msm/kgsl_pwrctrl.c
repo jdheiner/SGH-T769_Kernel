@@ -46,6 +46,9 @@ static int __secure_tz_entry(u32 cmd, u32 val)
 		__asmeq("%1", "r0")
 		__asmeq("%2", "r1")
 		__asmeq("%3", "r2")
+#ifdef REQUIRES_SEC
+	".arch_extension sec\n"
+#endif
 		"smc    #0      @ switch to secure world\n"
 		: "=r" (r0)
 		: "r" (r0), "r" (r1), "r" (r2)
